@@ -44,7 +44,7 @@ Several subroutines related to conversion to/from exponential map
 representation are provided by Hao Zhang:
 http://www.cs.berkeley.edu/~nhz/software/rotations/
 
-#Notes/FAQ
+## Notes/FAQ
 
 #How did you go from Eugene Hsu's data.zip to the data structures skel,Motion in data.mat?
 
