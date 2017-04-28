@@ -46,7 +46,7 @@ http://www.cs.berkeley.edu/~nhz/software/rotations/
 
 ## Notes/FAQ
 
-#How did you go from Eugene Hsu's data.zip to the data structures skel,Motion in data.mat?
+### How did you go from Eugene Hsu's data.zip to the data structures skel,Motion in data.mat?
 
 The MIT data has been obtained from Eugene Hsu (see link above). There is an archive here, data.zip including several motions in txt format.
 
@@ -78,7 +78,7 @@ Motion{2}=M(2621:3660,:);
 Motion{3}=M(3791:163000,:);
 I have not touched the data in any other way.
 
-#How can I use data from the CMU motion capture database with your code?
+### How can I use data from the CMU motion capture database with your code?
 
 My scripts are compatible with acclaim format (I have used CMU data which is in amc/asf). I use Neil Lawrence's toolbox (see link above) to load an acclaim asf and amc file.
 
