@@ -38,7 +38,8 @@ http://people.csail.mit.edu/ehsu/work/sig05stf/
 
 Several subroutines related to motion playback are adapted from Neil 
 Lawrence's Motion Capture Toolbox:
-http://www.cs.man.ac.uk/~neill/mocap/
+https://github.com/lawrennd/mocap
+which also requires https://github.com/lawrennd/ndlutil
 
 Several subroutines related to conversion to/from exponential map
 representation are provided by Hao Zhang:
