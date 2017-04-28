@@ -1,4 +1,4 @@
-# mhmublv
+# Modeling Human Motion Using Binary Latent Variables (mhmublv)
 
 Version 1.01 
 
