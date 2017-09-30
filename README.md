@@ -85,12 +85,12 @@ My scripts are compatible with acclaim format (I have used CMU data which is in 
 
 Just a note: I noticed that recent versions of his toolbox were giving me strange results on older versions of Matlab. It works fine for me on Matlab 7.5 or 7.6, so just a warning if the routines are giving you weird errors.
 
-The relevant scripts are acclaimReadSkel.m and acclaimLoadChannels.m (you need to call acclaimReadSkel.m first as the skel structure needs to be passed to acclaimLoadChannels).
+The relevant scripts are `acclaimReadSkel.m` and `acclaimLoadChannels.m` (you need to call `acclaimReadSkel.m` first as the `skel` structure needs to be passed to `acclaimLoadChannels`).
 
-So for each sequence, this would give you skel, channels. The "skel" should be the same for multiple sequences of the same subject. Then I stick all of the channels (of varying length) into the cell array called Motion (i.e. for all ii, call acclaimLoadChannels and then set Motion{ii}=channels)
+So for each sequence, this would give you `skel`, `channels`. The `skel` should be the same for multiple sequences of the same subject. Then I stick all of the channels (of varying length) into the cell array called Motion (i.e. for all ii, call `acclaimLoadChannels` and then set `Motion{ii}=channels`)
 
-Then to use my code, Motion will need to be converted into exponential map form. The relevant scripts are in the Motion/ subdirectory. Given that skel, Motion are now defined, batchConvertCMU.m will take each sequence in Motion and convert it to exponential maps via the function euler2expmap.m.
+Then to use my code, `Motion` will need to be converted into exponential map form. The relevant scripts are in the `Motion/` subdirectory. Given that `skel`, `Motion` are now defined, `batchConvertCMU.m` will take each sequence in `Motion` and convert it to exponential maps via the function `euler2expmap.m`.
 
-This will actually return skel1,Motion1 and so you should just set skel=skel1; Motion=Motion1; (as my code expects these variable names).
+This will actually return `skel1`, `Motion1` and so you should just set `skel=skel1; Motion=Motion1`; (as my code expects these variable names).
 
 Now your data should be in the right format to work with my preprocessing scripts.
