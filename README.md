@@ -49,34 +49,36 @@ http://www.cs.berkeley.edu/~nhz/software/rotations/ [Note: link is dead]
 
 ### How did you go from Eugene Hsu's data.zip to the data structures skel,Motion in data.mat?
 
-The MIT data has been obtained from Eugene Hsu (see link above). There is an archive here, data.zip including several motions in txt format.
+The MIT data has been obtained from Eugene Hsu (see link above). There is an archive here, `data.zip` including several motions in txt format.
 
-The data.mat file I provide is only a portion of the sequence Normal1_M.txt from this dataset.
+The `data.mat` file I provide is only a portion of the sequence `Normal1_M.txt` from this dataset.
 
-Here's how I have generated the {skel, Motion} data structures in data.mat. In Matlab:
+Here's how I have generated the `{skel, Motion}` data structures in `data.mat`. In Matlab:
 
-M = dlmread('insert_your_path_here/Normal1_M.txt','\t');
-This reads the 108 columns in this tab-delimited text file into the Matrix, M. Each row represents a frame.
+`M = dlmread('insert_your_path_here/Normal1_M.txt','\t');`
+This reads the 108 columns in this tab-delimited text file into the Matrix, `M`. Each row represents a frame.
 It also reads in a blank column, 109. So I discard it.
 
-M(:,109)=[];
-The meaning of the columns are described in the readme.txt in data.zip. You could replace Normal1_M.txt with any of the other text files.
+`M(:,109)=[];`
+The meaning of the columns are described in the `readme.txt` in `data.zip`. You could replace `Normal1_M.txt` with any of the other text files.
 
-To play this motion, with my player, you will need a skeleton. You can use the "skel" structure in my data.mat file. There is also a script in the Motion/ subdirectory called buildskel_mit.m which demonstrates how "skel" is built.
+To play this motion, with my player, you will need a skeleton. You can use the `skel` structure in my `data.mat` file. There is also a script in the `Motion/` subdirectory called `buildskel_mit.m` which demonstrates how `skel` is built.
 
 The skeleton is not part of the data on which we train the model, but we need it to play back the motion.
 
 It describes the hierarchy of segments, and which segments correspond to which columns of the data matrix.
 
-Note that you can play the motion with expPlayData.m:
+Note that you can play the motion with `expPlayData.m`:
 
-figure(2); expPlayData(skel,M,1/120);
+`figure(2); expPlayData(skel,M,1/120);`
 Note that the data is at 120fps and it is very big so this will take a long time.
 This data is extremely noisy, so I have isolated some "clean" segments.
 
+```
 Motion{1}=M(551:2300,:);
 Motion{2}=M(2621:3660,:);
 Motion{3}=M(3791:163000,:);
+```
 I have not touched the data in any other way.
 
 ### How can I use data from the CMU motion capture database with your code?
