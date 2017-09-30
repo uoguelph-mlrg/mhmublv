@@ -43,7 +43,7 @@ which also requires https://github.com/lawrennd/ndlutil
 
 Several subroutines related to conversion to/from exponential map
 representation are provided by Hao Zhang:
-http://www.cs.berkeley.edu/~nhz/software/rotations/
+http://www.cs.berkeley.edu/~nhz/software/rotations/ [Note: link is dead]
 
 ## Notes/FAQ
 
